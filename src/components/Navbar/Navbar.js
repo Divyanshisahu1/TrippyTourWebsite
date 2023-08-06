@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../Navbar/Navbar.css"
 import { Menuitems } from "./Menuitems"
 
 export const Navbar = () => {
+    const [clicked, setClicked]=useState(false)
+    const handleClick = ()=>{
+        setClicked(!clicked)
+    }
     return (
         <nav className='Navitems'>
             <h1 className='navbar-logo'>Trippy</h1>
-            <ul className='nav-menu'>
+            <div className='menu-icons' onClick={handleClick}>
+                <i className={clicked?"fas fa-times":"fas fa-bars" }></i>
+            </div>
+            <ul className={clicked?"nav-menu active":'nav-menu'}>
                 {
                     Menuitems.map((item, index) => {
                         return (

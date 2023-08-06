@@ -1,16 +1,21 @@
-.Navitems{
+.Navitems {
     display: flex;
     justify-content: space-between;
     /* background-color: aqua; */
     width: 95%;
     height: 4rem;
-    margin: auto;
     align-items: center;
     border-radius: 0.4rem;
-    margin-top: 1.5rem;
+    position: fixed;
+    top:20px;
+    left:50%;
+    transform: translate(-50%);           /*side m equal space*/
+    z-index: 9999;                      /*Always visible*/
+
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.nav-menu{
+
+.nav-menu {
     display: flex;
     height: 100%;
     width: 40%;
@@ -18,30 +23,40 @@
     align-items: center;
     list-style: none;
     /* background-color: brown; */
-    
+
 }
-.navbar-logo{
+
+.navbar-logo {
     font-size: 2rem;
     cursor: pointer;
-    padding:16px
+    padding: 16px
 }
-.nav-links{
+
+.nav-links {
     text-decoration: none;
     color: black;
     font-weight: bolder;
 }
-.fa-solid{
+
+.fa-solid {
     margin-right: 6px;
 }
-.nav-links:hover{
+
+.nav-links:hover {
     background-color: aqua;
+    padding: 10px;
     color: white;
     border-radius: 4px;
-    color:black;
+    color: black;
     transition: all 0.2s ease-in-out;
 }
-.signup_btn{
-    padding:2px 5px;
+
+.nav-links-mobile {
+    display: none;
+}
+
+.signup_btn {
+    padding: 2px 5px;
     background-color: lightgray;
     font-size: 15px;
     border: none;
@@ -49,10 +64,105 @@
     cursor: pointer;
     font-weight: 600;
 }
-.signup_btn:hover{
+
+.signup_btn:hover {
     background-color: black;
     color: white;
-    
+
     transition: 0.2s ease-in-out
 }
+.menu-icons{
+    display: none;
+}
 
+@media screen and (max-width:850px) {
+    .Navitems {
+        z-index: 999;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #fff;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        align-items: center;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+
+    }
+
+    .nav-menu.active {
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links {
+        display: block;
+        padding: 2rem 0;
+        font-size: 1.2rem;
+        width: 100vw;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+
+    }
+
+    .nav-links:hover {
+        background-color: #01959a;
+        width: 100vw;
+        height: 2rem;
+        transition: 3s ease;
+
+    }
+
+    .signup_btn {
+        display: none;
+
+    }
+
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        padding: 1.5rem;
+        margin: 15px;
+        border-radius: 4px;
+        text-decoration: none;
+        width: 80vw;
+        background-color: #01959a;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+
+    }
+    .menu-icons{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-icons i{
+        font-size: 1.5rem;
+        color: black;
+    }
+
+
+
+
+
+
+
+
+
+}
