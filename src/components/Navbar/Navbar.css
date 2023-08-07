@@ -7,10 +7,12 @@
     align-items: center;
     border-radius: 0.4rem;
     position: fixed;
-    top:20px;
-    left:50%;
-    transform: translate(-50%);           /*side m equal space*/
-    z-index: 9999;                      /*Always visible*/
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    /*side m equal space*/
+    z-index: 9999;
+    /*Always visible*/
 
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -71,7 +73,8 @@
 
     transition: 0.2s ease-in-out
 }
-.menu-icons{
+
+.menu-icons {
     display: none;
 }
 
@@ -147,22 +150,15 @@
         letter-spacing: 2px;
 
     }
-    .menu-icons{
+
+    .menu-icons {
         display: block;
         cursor: pointer;
     }
 
-    .menu-icons i{
+    .menu-icons i {
         font-size: 1.5rem;
         color: black;
     }
-
-
-
-
-
-
-
-
 
 }
