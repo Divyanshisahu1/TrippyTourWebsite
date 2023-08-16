@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar } from '../../components/Navbar/Navbar'
 import { Hero } from "../../components/Hero/Hero"
 import HomePic from "../../assets/Home.jpg"
+import { Destination } from '../../components/Destination/Destination'
 
 
 export const Home = () => {
@@ -17,6 +18,7 @@ export const Home = () => {
                 btnClass="show"
             ></Hero>
             <Navbar></Navbar>
+            <Destination></Destination>
         </>
 
     )
