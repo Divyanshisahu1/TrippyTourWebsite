@@ -5,24 +5,35 @@
     justify-content: center;
     align-items: center;
 }
-.destination h1{
+
+.destination h1 {
     font-size: 3rem;
 }
-.first-des{
+
+.first-des {
     display: flex;
     align-items: center;
     margin-top: 4.5rem;
 }
-.des-text{
+
+.first-des-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 4.5rem;
+}
+
+.des-text {
     width: 45%;
     text-align: center;
     font-size: 1.1rem;
 }
 
-.des-text h2{
+.des-text h2 {
     padding-bottom: 1rem;
 }
-.image{
+
+.image {
     position: relative;
     display: flex;
     width: 50%;
@@ -30,38 +41,48 @@
     z-index: -99;
 }
 
-.image img{
+.image img {
     width: 49%;
     height: 350px;
     object-fit: cover;
     border-radius: 6px;
-    box-shadow: -1px 1px 62px -18px rgba(0,0,0,0.19);
+    box-shadow: -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
 
 }
 
-.image img:nth-child(2){
+.image img:nth-child(2) {
     position: absolute;
-    top:-10%;
-    right:0
+    top: -10%;
+    right: 0
 }
 
 @media screen and (max-width:850px) {
-    .destination{
+    .destination {
         margin: 4rem 2rem;
     }
-    .first-des{
+
+    .first-des {
         display: flex;
         flex-direction: column-reverse;
         margin-top: 2.5rem;
     }
-    .des-text{
+
+    .first-des-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 4.5rem;
+    }
+
+    .des-text {
         width: 100%;
     }
-    .image{
+
+    .image {
         width: 100%;
-        margin:1.8rem 0
+        margin: 1.8rem 0
     }
-    .image img{
+
+    .image img {
         height: 250px;
     }
 }
