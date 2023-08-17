@@ -2,6 +2,8 @@ import React from 'react'
 import { Navbar } from '../../components/Navbar/Navbar'
 import { Hero } from "../../components/Hero/Hero"
 import ServicePic from "../../assets/3.jpg"
+import { Footer } from '../../components/Footer/Footer'
+import { Trip } from '../../components/Trip/trip'
 
 
 export const Service = () => {
@@ -14,6 +16,8 @@ export const Service = () => {
                 btnClass="hide"
             ></Hero>
             <Navbar></Navbar>
+            <Trip></Trip>
+            <Footer></Footer>
         </>
 
     )

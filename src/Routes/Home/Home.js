@@ -3,6 +3,8 @@ import { Navbar } from '../../components/Navbar/Navbar'
 import { Hero } from "../../components/Hero/Hero"
 import HomePic from "../../assets/Home.jpg"
 import { Destination } from '../../components/Destination/Destination'
+import { Trip } from "../../components/Trip/trip"
+import { Footer } from '../../components/Footer/Footer'
 
 
 export const Home = () => {
@@ -19,6 +21,8 @@ export const Home = () => {
             ></Hero>
             <Navbar></Navbar>
             <Destination></Destination>
+            <Trip></Trip>
+            <Footer></Footer>
         </>
 
     )
